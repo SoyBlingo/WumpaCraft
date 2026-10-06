@@ -1,6 +1,19 @@
-Third-party code notice
+Aviso sobre código adaptado para WumpaCraft
 
-Entity rendering integration adapted from code by Zack Polc (Zckyy).
+WumpaCraft es un proyecto de SoyBlingo, desarrollado con asistencia de Codex.
+Adaptamos y modificamos un pequeño fragmento de código de Zack Polc (Zckyy)
+para sustituir la representación del personaje de Minecraft por Crash y
+mostrar los objetos propios de WumpaCraft.
+
+El nombre de Zack Polc se conserva como reconocimiento al autor de ese
+fragmento original y conforme a su licencia MIT. No se le atribuye la
+creación de WumpaCraft ni de los recursos de Crash.
+
+El personaje, los modelos, las animaciones y los sonidos usados proceden
+de Crash Bandicoot N. Sane Trilogy y se preparan desde la copia local del
+jugador. No usamos recursos del juego Mario 64.
+
+A continuación se conserva íntegra la licencia del código original:
 
 MIT License
 
