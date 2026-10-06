@@ -31,8 +31,8 @@ Setup/prepare.log muestra la preparación; Prism/instances/WumpaCraft/.minecraft
 Desinstalar desde Melty. Conserva una copia de tus mundos antes de borrar la instancia.
 
 ## Créditos
+Avisos de componentes reutilizados en `THIRD-PARTY.txt` y en sus carpetas de licencias.
 Idea, dirección y pruebas: SoyBlingo. Programación y preparación asistidas por Codex (OpenAI).
-Base del remix: Mario 64 in Minecraft por Zckyy / Melty (MIT; LICENSE-Foundation.txt).
 Conversor PAK basado en la investigación de Kishimisu/The Apprentice (MIT).
 Prism Launcher 11.1.1, GPL-3.0: https://github.com/PrismLauncher/PrismLauncher/tree/11.1.1
 Fabric API, Apache-2.0: https://github.com/FabricMC/fabric
