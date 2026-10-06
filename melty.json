@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "mode": "installed",
+  "games": [
+    {
+      "slug": "minecraft-java",
+      "role": "primary"
+    },
+    {
+      "slug": "custom-crash-bandicoot-n-sane-trilogy",
+      "role": "secondary",
+      "ownCopy": true
+    }
+  ],
+  "components": [
+    {
+      "id": "main",
+      "fileName": "WumpaCraft-0.3.0.zip",
+      "kind": "main",
+      "label": "WumpaCraft e instalación automática",
+      "required": true
+    }
+  ],
+  "requirements": [],
+  "mappings": [
+    {
+      "component": "main",
+      "from": "",
+      "to": "{managed}"
+    }
+  ],
+  "launch": {
+    "kind": "exe",
+    "path": "{managed}/Prism/prismlauncher.exe",
+    "args": [
+      "--launch",
+      "WumpaCraft"
+    ]
+  },
+  "ownCopies": [
+    {
+      "game": "custom-crash-bandicoot-n-sane-trilogy",
+      "names": [
+        "Crash Bandicoot - N Sane Trilogy",
+        "Crash Bandicoot N. Sane Trilogy"
+      ],
+      "disc": {
+        "files": [
+          "archives/B101_PapuPapu.pak",
+          "archives/C1_StartScreen.pak",
+          "archives/Coco.pak",
+          "archives/Crash.pak",
+          "archives/L333_FutureTense.pak",
+          "archives/VV_Logo_Intro.pak",
+          "archives/permanent.pak",
+          "archives/permanent_pc.pak"
+        ]
+      },
+      "to": "{managed}/own/crash",
+      "prepare": {
+        "launch": {
+          "kind": "exe",
+          "path": "{managed}/Setup/runtime/python.exe",
+          "args": [
+            "{managed}/Setup/prepare.py",
+            "--game",
+            "{managed}/own/crash",
+            "--dest",
+            "{managed}/Prism/instances/WumpaCraft/.minecraft/config/crashmc",
+            "--ready",
+            "{managed}/own/crash/wumpacraft-ready.json"
+          ]
+        },
+        "done": {
+          "file": "{managed}/own/crash/wumpacraft-ready.json",
+          "contains": "\"ready\": true"
+        }
+      }
+    }
+  ],
+  "setup": {
+    "label": "Minecraft de WumpaCraft",
+    "launch": {
+      "kind": "exe",
+      "path": "{managed}/Prism/prismlauncher.exe",
+      "args": [
+        "--launch",
+        "WumpaCraft"
+      ]
+    },
+    "done": {
+      "file": "{managed}/Prism/instances/WumpaCraft/.minecraft/logs/latest.log",
+      "contains": "Backend library:"
+    }
+  },
+  "runtimeData": [
+    "{managed}/Prism",
+    "{managed}/own/crash",
+    "{managed}/Setup/work"
+  ],
+  "notes": {
+    "beforeInstall": "Requiere Minecraft Java y tu instalación de Crash N. Sane Trilogy para PC. Solo un jugador. Los recursos de Crash se preparan localmente.",
+    "firstLaunch": "Abre un mundo individual y lee la guía de WumpaCraft. La primera preparación puede tardar varios minutos."
+  }
+}
